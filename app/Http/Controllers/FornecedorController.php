@@ -15,7 +15,7 @@ class FornecedorController extends Controller
      */
     public function index()
     {
-        //Select * from Fornecedores
+        //SELECT * FROM fornecedor
         $fornecedores = DB::table('fornecedor')->select('fornecedor.*')->get();
 
         return view('template.principal',compact('fornecedores',$fornecedores));
