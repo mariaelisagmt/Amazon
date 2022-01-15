@@ -17,5 +17,11 @@ use App\Http\Controllers\FornecedorController;
 ****MODELO*****
 Sistema -> Route Requests HTTP ( get, post, delete, put )-> CONTROLLER -> MODELS -> CONSULTAS MYSQL -> CONTROLLER -> VIEW
 */
+
+/*Home*/
+Route::get('/home', function(){
+        return view('principal');
+})->name('home');
+/*Funcionários*/
 Route::get('/funcionarios/lista', [FornecedorController::class, 'index'])
         ->name('fornecedores.lista');

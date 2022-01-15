@@ -18,7 +18,7 @@ class FornecedorController extends Controller
         //SELECT * FROM fornecedor
         $fornecedores = DB::table('fornecedor')->select('fornecedor.*')->get();
 
-        return view('template.principal',compact('fornecedores',$fornecedores));
+        return view('layouts.fornecedor_listar',compact('fornecedores',$fornecedores));
     }
 
     /**
